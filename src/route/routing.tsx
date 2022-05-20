@@ -1,17 +1,24 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom'
-import {Login} from '../login'
-import {Ads} from '../ads'
-import {Info} from '../info'
-import {Sell} from '../sell'
-import {SellAdd} from '../sellAdd'
-import {SellDetail} from '../sellDetail'
-import {Sold} from '../sold'
-import {AdDetail} from '../adDetail'
-import {Perchase} from '../perchase'
-import {Order} from '../order'
-import {Bought} from '../bought'
 
+
+import {Login} from '../login'
+import {Info} from '../info'
+
+//buyerComponnents from here
+import {Ads} from '../buyerComponents/ads'
+import {AdDetail} from '../buyerComponents/adDetail'
+import {Perchase} from '../buyerComponents/perchase'
+import {Order} from '../buyerComponents/order'
+import {Bought} from '../buyerComponents/bought'
+//buyerComponnents to here
+
+//sellerComponnents from here
+import {Sell} from '../sellerComponents/sell'
+import {SellAdd} from '../sellerComponents/sellAdd'
+import {SellDetail} from '../sellerComponents/sellDetail'
+import {Sold} from '../sellerComponents/sold'
+//sellerComponnents to here
 export const Routing = () => {
     return (
         <>
