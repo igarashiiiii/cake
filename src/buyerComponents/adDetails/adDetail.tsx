@@ -8,18 +8,21 @@ import { AdDetailsCards } from "./adDetailsCards"
 
 //globalCss import from here
 import { StyledContainer } from "../../globalCss"
+import { StyledBody } from "../../globalCss"
 //globalCss import to here
 
 export const AdDetail = ( ) => {
     return(
         <div>
-            <StyledContainer>
+            <StyledBody>
                 <Header/>
-                AdDetailコンポーネント
-                商品詳細画面
+                <StyledContainer>
+                    AdDetailコンポーネント
+                    商品詳細画面
                 <AdDetailsCards/>
-                <BuyFooter/>
-            </StyledContainer>            
+                </StyledContainer>            
+                <BuyFooter/>            
+            </StyledBody>
         </div>
     )
 }

@@ -8,20 +8,22 @@ import { AdsProducts } from "./adsCards"
 
 //globalCss import from here
 import { StyledContainer } from "../../globalCss"
+import { StyledBody } from "../../globalCss"
 //globalCss import to here
 
 
 export const Ads = ( ) => {
     return(
         <div>
-            <StyledContainer>
+            <StyledBody>
                 <Header/>
+                <StyledContainer>
                     adsコンポーネント
                     商品一覧画面
                     <AdsProducts/>
-                <BuyFooter/>
-            </StyledContainer>            
-            
+                </StyledContainer>            
+                <BuyFooter/>            
+            </StyledBody>
         </div>
     )
 }
