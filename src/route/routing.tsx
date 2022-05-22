@@ -10,7 +10,7 @@ import {Ads} from '../buyerComponents/ads/ads'
 import {AdDetail} from '../buyerComponents/adDetails/adDetail'
 
 import {Order} from '../buyerComponents/order/order'
-import {Bought} from '../buyerComponents/bought'
+import {Bought} from '../buyerComponents/bought/bought'
 //buyerComponnents to here
 
 //sellerComponnents from here
