@@ -12,17 +12,17 @@ import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
 //import MUI icon to here
 
 //import globalCss from here 
-import { StyledBottomNavigation } from '../globalCss';
+import { StyledBuyBottomNavigation } from '../globalCss';
 //import globalCss to here 
 
 export const BuyFooter = ( ) => {
     return(
         <div>
-            <StyledBottomNavigation>
+            <StyledBuyBottomNavigation>
                 <BottomNavigationAction label="Order" icon={<ShoppingCartOutlinedIcon />} component={Link} to="/order"/>
                 <BottomNavigationAction label="Search" icon={<SearchOutlinedIcon />} component={Link} to="/"/>
                 <BottomNavigationAction label="Bought" icon={<DoneOutlineOutlinedIcon />} component={Link} to="/bought"/>
-            </StyledBottomNavigation>
+            </StyledBuyBottomNavigation>
         </div>
     )
 }

@@ -9,7 +9,7 @@ import {Info} from '../info'
 import {Ads} from '../buyerComponents/ads/ads'
 import {AdDetail} from '../buyerComponents/adDetails/adDetail'
 
-import {Order} from '../buyerComponents/order'
+import {Order} from '../buyerComponents/order/order'
 import {Bought} from '../buyerComponents/bought'
 //buyerComponnents to here
 

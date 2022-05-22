@@ -6,18 +6,21 @@ import { Header } from "../header/header"
 //components import to here
 
 //globalCss import from here
-import { StyledContainer } from "../globalCss"
+import { StyledMain } from "../globalCss"
+import { StyledBody } from "../globalCss"
 //globalCss import to here
 
 export const Bought = ( ) => {
     return(
         <div>
-            <StyledContainer>
-            <Header/>
-            Boughtコンポーネント
-            購入履歴
-            <BuyFooter/>
-            </StyledContainer>
+            <StyledBody>
+                <Header/>
+                <StyledMain>
+                Boughtコンポーネント
+                購入履歴
+                </StyledMain>
+                <BuyFooter/>
+            </StyledBody>
         </div>
     )
 }

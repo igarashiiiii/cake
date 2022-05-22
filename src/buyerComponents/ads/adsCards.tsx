@@ -5,11 +5,11 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
-export const AdsProducts = () =>  {
+export const AdsCards = () =>  {
 
   return (
     
-    <Card sx={{ maxWidth: 200 }}>
+    <Card sx={{ maxWidth: 250, boxShadow: 3}}>
       <CardActionArea>
         <CardMedia
           component="img"

@@ -7,20 +7,18 @@ import { AdDetailsCards } from "./adDetailsCards"
 //components import to here
 
 //globalCss import from here
-import { StyledContainer } from "../../globalCss"
+import { StyledMain } from "../../globalCss"
 import { StyledBody } from "../../globalCss"
 //globalCss import to here
 
 export const AdDetail = ( ) => {
     return(
         <div>
-            <StyledBody>
+            <StyledBody sx={{display: 'block'}}>
                 <Header/>
-                <StyledContainer>
-                    AdDetailコンポーネント
-                    商品詳細画面
-                <AdDetailsCards/>
-                </StyledContainer>            
+                <StyledMain>
+                    <AdDetailsCards/>
+                </StyledMain>            
                 <BuyFooter/>            
             </StyledBody>
         </div>

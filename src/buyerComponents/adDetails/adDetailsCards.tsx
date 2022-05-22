@@ -5,17 +5,21 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { Button, CardActions } from '@mui/material';
 
+var cardStyle = {
+  display: 'block',
+}
+
 export const AdDetailsCards = () =>  {
 
   return (
-    <Card sx={{ maxWidth: '100%'}}>
+    <Card sx={{ maxWidth: '100%'}} style={cardStyle}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Title
           </Typography>
           <CardMedia
           component="img"
-          height="100%"
+          height="40%"
           image="https://source.unsplash.com/random"
           alt="produxts"
         />

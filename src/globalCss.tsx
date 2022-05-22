@@ -14,24 +14,34 @@ export const StyledBody = styled('div')({
 
 //Header stay at the top
 export const StyledTopBox = styled(Box)({
-    position: 'absolute',
+    position: 'absolute',//Headerをmainより手前に表示させる
     top: 0,
     width:'100%',
-    height:'5%'
+    height:'5%',
+    zIndex: 2 //Headerをmainより手前に表示させる
 });
 
 //main
-export const StyledContainer = styled(Container)({
-    height: '90%',
+export const StyledMain = styled(Container)({
+    height: '95%',
     width:'100%',
     backgroundColor:'lightblue',
-    paddingBottom: '5%',
-    paddingTop: '5%',
-    overflow: 'scroll'
+    paddingTop: '80px',
+    paddingBottom: '40px',
+    overflow: 'scroll',
+    zIndex: 1
 });
 
-//footer stay at the bottom
-export const StyledBottomNavigation = styled(BottomNavigation)({
+//buy footer stay at the bottom
+export const StyledBuyBottomNavigation = styled(BottomNavigation)({
+    position: 'absolute',
+    bottom: 0,
+    width:'100%',
+    backgroundColor:'lightgreen'
+})
+
+//sell footer stay at the bottom
+export const StyledSellBottomNavigation = styled(BottomNavigation)({
     position: 'absolute',
     bottom: 0,
     width:'100%',

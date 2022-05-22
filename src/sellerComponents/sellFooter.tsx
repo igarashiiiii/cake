@@ -13,18 +13,18 @@ import LocalMallOutlinedIcon from '@mui/icons-material/LocalMallOutlined';
 //import MUI icon to here
 
 //import globalCss from here 
-import { StyledBottomNavigation } from '../globalCss';
+import { StyledSellBottomNavigation } from '../globalCss';
 //import globalCss to here 
 
 export const SellFooter = ( ) => {
     return(
         <div>
-            <StyledBottomNavigation>
+            <StyledSellBottomNavigation>
                 <BottomNavigationAction label="add" icon={<AddCircleOutlineOutlinedIcon />} component={Link} to="/add"/>
                 <BottomNavigationAction label="Sell" icon={<InventoryOutlinedIcon />} component={Link} to="/sell"/>
                 <BottomNavigationAction label="detail" icon={<SettingsAccessibilityOutlinedIcon />} component={Link} to="/detail"/>
                 <BottomNavigationAction label="sold" icon={<LocalMallOutlinedIcon />} component={Link} to="/sold"/>
-            </StyledBottomNavigation>
+            </StyledSellBottomNavigation>
         </div>
     )
 }
