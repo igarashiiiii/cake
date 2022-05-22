@@ -5,12 +5,19 @@ import { SellFooter } from "./sellFooter"
 import { Header } from "../header/header"
 //components import to here
 
+//globalCss import from here
+import { StyledContainer } from "../globalCss"
+//globalCss import to here
+
+
 export const Sold = ( ) => {
     return(
         <div>
-            <Header/>
-            Soldコンポーネント
-            <SellFooter/>
+            <StyledContainer>
+                <Header/>
+                    Soldコンポーネント
+                <SellFooter/>
+            </StyledContainer>
         </div>
     )
 }

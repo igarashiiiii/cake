@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 
 // import MUI from here
 import Toolbar from '@mui/material/Toolbar';
@@ -24,7 +25,12 @@ export const Humberger = ( ) => {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                     
                     </Typography>
-                    <Button color="inherit">Login</Button>
+                    <Button color="inherit">
+                        <Link to ="/sell">販売者</Link>
+                    </Button>
+                    <Button>
+                        <Link to ="/">購入者</Link>
+                    </Button>
                 </Toolbar>
         </div>
     )

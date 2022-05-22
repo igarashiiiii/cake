@@ -6,9 +6,9 @@ import {Login} from '../login'
 import {Info} from '../info'
 
 //buyerComponnents from here
-import {Ads} from '../buyerComponents/ads'
-import {AdDetail} from '../buyerComponents/adDetail'
-import {Perchase} from '../buyerComponents/perchase'
+import {Ads} from '../buyerComponents/ads/ads'
+import {AdDetail} from '../buyerComponents/adDetails/adDetail'
+
 import {Order} from '../buyerComponents/order'
 import {Bought} from '../buyerComponents/bought'
 //buyerComponnents to here
@@ -19,6 +19,9 @@ import {SellAdd} from '../sellerComponents/sellAdd'
 import {SellDetail} from '../sellerComponents/sellDetail'
 import {Sold} from '../sellerComponents/sold'
 //sellerComponnents to here
+
+import {Confirm} from '../confirm'
+
 export const Routing = () => {
     return (
         <>
@@ -31,9 +34,10 @@ export const Routing = () => {
                 <Route path="add" element={<SellAdd/>}></Route>
                 <Route path="sold" element={<Sold/>}></Route>
                 <Route path="buy" element={<AdDetail/>}></Route>
-                <Route path="perchase" element={<Perchase/>}></Route>
                 <Route path="order" element={<Order/>}></Route>
                 <Route path="bought" element={<Bought/>}></Route>
+
+                <Route path="confirm" element={<Confirm/>}></Route>
             </Routes>
         </>
     )

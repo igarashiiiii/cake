@@ -4,17 +4,20 @@ import {Humberger} from "./humberger"
 
 // import MUI from here
 import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
 // import MUI to here
+
+//import globalCss from here 
+import { StyledTopBox } from '../globalCss';
+//import globalCss to here 
 
 export const Header = ( ) => {
     return(
         <div>
-            <Box sx={{ flexGrow: 1 }}>
+            <StyledTopBox sx={{ flexGrow: 1 }}>
                 <AppBar position="static">
                     <Humberger/>
                 </AppBar>
-            </Box>
+            </StyledTopBox>
         </div>
     )
 }
