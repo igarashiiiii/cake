@@ -21,6 +21,7 @@ export const SellDetailsCards = () =>  {
       </CardContent>
       <CardActions>
         <Button size="small">販売完了</Button>
+        <Button size="small">キャンセル</Button>
       </CardActions>
   </Card>
   );

@@ -15,9 +15,9 @@ import {Bought} from '../buyerComponents/bought/bought'
 
 //sellerComponnents from here
 import {Sell} from '../sellerComponents/sell/sell'
-import {SellAdd} from '../sellerComponents/sellAdd'
+import {SellAdd} from '../sellerComponents/sellAdd/sellAdd'
 import {SellDetail} from '../sellerComponents/sellDetail/sellDetail'
-import {Sold} from '../sellerComponents/sold'
+import {Sold} from '../sellerComponents/sold/sold'
 //sellerComponnents to here
 
 import {Confirm} from '../confirm'
