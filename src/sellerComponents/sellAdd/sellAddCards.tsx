@@ -47,6 +47,14 @@ export const SellAddCards = () => {
         autoComplete="current-password"
         fullWidth
       />
+      <TextField
+        id="outlined-password-input"
+        label="description"
+        autoComplete="current-password"
+        maxRows={8}
+        fullWidth
+        multiline
+      />
       <Button>
         出品
       </Button>
