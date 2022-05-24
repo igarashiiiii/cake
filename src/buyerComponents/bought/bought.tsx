@@ -17,6 +17,8 @@ export const Bought = ( ) => {
 			<StyledBody>
 				<Header/>
 				<StyledMain>
+					boughtコンポーネント<br />
+					引き取り済みの商品を表示
 					<BoughtCards/>
 					<BoughtCards/>
 					<BoughtCards/>

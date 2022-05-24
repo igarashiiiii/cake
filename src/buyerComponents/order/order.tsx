@@ -17,6 +17,8 @@ export const Order = ( ) => {
 			<StyledBody>
 				<Header/>
 				<StyledMain>
+					予約中の商品<br />
+					orderしたが、まだ商品を引き取っていない
 					<OrderCards/>
 					<OrderCards/>
 					<OrderCards/>

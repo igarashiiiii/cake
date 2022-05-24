@@ -17,6 +17,8 @@ export const SellDetail = ( ) => {
             <StyledBody sx={{display: 'block'}}>
                 <Header/>
                 <StyledMain>
+                    selldetailコンポーネント<br />
+                    商品ごとの販売先を表示
                     <SellDetailsCards/>
                     <SellDetailsCards/>
                     <SellDetailsCards/>

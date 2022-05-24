@@ -18,7 +18,8 @@ export const SellAdd = ( ) => {
             <StyledBody>
                 <Header/>
                 <StyledMain>
-                    SellAddコンポーネント
+                    SellAddコンポーネント<br />
+                    広告作成ページ
                     <SellAddCards/>
                 </StyledMain>            
                 <SellFooter/>            

@@ -17,6 +17,8 @@ export const Sell = ( ) => {
             <StyledBody>
                 <Header/>
                 <StyledMain>
+                    sellコンポーネント<br />
+                    自分の売り出している商品を表示
                     <SellCards/>
                     <SellCards/>
                     <SellCards/>

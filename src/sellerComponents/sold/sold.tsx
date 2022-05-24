@@ -18,7 +18,8 @@ export const Sold = ( ) => {
             <StyledBody>
                 <Header/>
                 <StyledMain>
-                    Soldコンポーネント
+                    Soldコンポーネント<br />
+                    販売済の商品を表示するページ
                     <SoldCards/>
                     <SoldCards/>
                     <SoldCards/>

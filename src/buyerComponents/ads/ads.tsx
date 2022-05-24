@@ -19,6 +19,8 @@ export const Ads = ( ) => {
             <StyledBody>
                 <Header />
                 <StyledMain>
+									商品一覧画面<br />
+									出品中の商品を表示
 									<Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm:9, md: 12 }}>
 										<Grid item xs={2} sm={3} md={3}>
 											<AdsCards/>
