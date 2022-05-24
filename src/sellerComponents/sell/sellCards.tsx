@@ -19,19 +19,19 @@ export const SellCards = () =>  {
         <Button>
           出品を取り消す
         </Button>
-				<Typography gutterBottom variant="h6" component="div">
+				<Typography gutterBottom variant="subtitle2" component="div">
 						Title
 				</Typography>
-				<Typography gutterBottom variant="h6" component="div">
+				<Typography gutterBottom variant="subtitle2" component="div">
 						予約人数　販売人数　未売人数
 				</Typography>
-				<Typography gutterBottom variant="h6" component="div">
+				<Typography gutterBottom variant="subtitle2" component="div">
 						price
 				</Typography>
-				<Typography gutterBottom variant="h6" component="div">
+				<Typography gutterBottom variant="subtitle2" component="div">
 						delivery price
 				</Typography>
-				<Typography gutterBottom variant="h6" component="div">
+				<Typography gutterBottom variant="subtitle2" component="div">
 						place
 				</Typography>
 			</Box>
