@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
 
 
 import {Login} from '../login'
@@ -22,23 +22,31 @@ import {Sold} from '../sellerComponents/sold/sold'
 
 import {Confirm} from '../confirm'
 
+//import global state from here
+import { ProductInfo } from '../globalState/productInfo';
+//import global state to here
+
 export const Routing = () => {
     return (
         <>
-            <Routes>    
-                <Route path="login" element={<Login /> }></Route>
-                <Route path="/" element={<Ads/>}></Route>
-                <Route path="info" element={<Info/>}></Route>
-                <Route path="sell" element={<Sell/>}></Route>
-                <Route path="detail" element={<SellDetail/>}></Route>
-                <Route path="add" element={<SellAdd/>}></Route>
-                <Route path="sold" element={<Sold/>}></Route>
-                <Route path="buy" element={<AdDetail/>}></Route>
-                <Route path="order" element={<Order/>}></Route>
-                <Route path="bought" element={<Bought/>}></Route>
+        	<BrowserRouter>
+						<ProductInfo>
+							<Routes>    
+									<Route path="login" element={<Login /> }></Route>
+									<Route path="/" element={<Ads/>}></Route>
+									<Route path="info" element={<Info/>}></Route>
+									<Route path="sell" element={<Sell/>}></Route>
+									<Route path="detail" element={<SellDetail/>}></Route>
+									<Route path="add" element={<SellAdd/>}></Route>
+									<Route path="sold" element={<Sold/>}></Route>
+									<Route path="buy" element={<AdDetail/>}></Route>
+									<Route path="order" element={<Order/>}></Route>
+									<Route path="bought" element={<Bought/>}></Route>
 
-                <Route path="confirm" element={<Confirm/>}></Route>
-            </Routes>
+									<Route path="confirm" element={<Confirm/>}></Route>
+							</Routes>
+						</ProductInfo>
+        	</BrowserRouter>
         </>
     )
 }

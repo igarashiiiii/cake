@@ -30,9 +30,8 @@ export const SellDetail = ( ) => {
                     <SellDetailsCards/>
                     <SellDetailsCards/>
                 </StyledMain>            
-                <SellFooter/>            
+                <SellFooter/>
             </StyledBody>
-
         </div>
     )
 }
