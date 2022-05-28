@@ -39,7 +39,6 @@ export const Routing = () => {
 									<Route path="buy" element={<AdDetail/>}></Route>
 									<Route path="order" element={<Order/>}></Route>
 									<Route path="bought" element={<Bought/>}></Route>
-
 									<Route path="confirm" element={<Confirm/>}></Route>
 							</Routes>
         </>
