@@ -3,7 +3,6 @@ import React from 'react';
 //components import from here
 import { BuyFooter } from "../buyFooter"
 import { Header } from "../../header/header"
-// import { AdsCards } from "./adsCards"
 //components import to here
 
 //globalCss import from here
@@ -39,6 +38,7 @@ export const Ads = ( ) => {
 									<Grid container spacing={{ xs: 2, md: 3 }} columns={{ xs: 4, sm:9, md: 12 }}>
 									{productInfo.map((item:any) => {
 										return(
+											//productStatusで表示する広告にフィルターをかける。sellのみ表示
 											item.productStatus === 'sell' &&
 											<Grid item xs={2} sm={3} md={3} key={item.productId}>
 												<Card sx={{ maxWidth: 350, boxShadow: 3}}>
