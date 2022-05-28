@@ -5,13 +5,18 @@ import { BrowserRouter } from "react-router-dom"
 
 import { Routing } from './route/routing'
 
+// import from global state
+import { ProductInfo } from './globalState/productInfo';
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter> 
+     <ProductInfo> 
       <Routing/>
+     </ProductInfo>
       {/* <App key="1"/> */}
     </BrowserRouter>
   </React.StrictMode>

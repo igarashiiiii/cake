@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import { Routes, Route} from 'react-router-dom'
 
 
 import {Login} from '../login'
@@ -23,14 +23,11 @@ import {Sold} from '../sellerComponents/sold/sold'
 import {Confirm} from '../confirm'
 
 //import global state from here
-import { ProductInfo } from '../globalState/productInfo';
 //import global state to here
 
 export const Routing = () => {
     return (
         <>
-        	<BrowserRouter>
-						<ProductInfo>
 							<Routes>    
 									<Route path="login" element={<Login /> }></Route>
 									<Route path="/" element={<Ads/>}></Route>
@@ -45,8 +42,6 @@ export const Routing = () => {
 
 									<Route path="confirm" element={<Confirm/>}></Route>
 							</Routes>
-						</ProductInfo>
-        	</BrowserRouter>
         </>
     )
 }
