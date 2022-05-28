@@ -17,31 +17,29 @@ let cardStyle = {
 
 export const AdDetailsCards = () =>  {
   let {productInfo,setProductInfo} = useContext(ProductInformations)
-  console.log(productInfo[0])
-  console.log(setProductInfo)
+  //Firebaseから情報をとってくるまで、表示するidを静的に示す
+  let productId:string = '0'
   return (
     <Card sx={{ maxWidth: '100%'}} style={cardStyle}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
             Title <br />
+            productIdを静的に固定:{productId}
           </Typography>
           <CardMedia
           component="img"
-          height="40%"
-          image="https://source.unsplash.com/random"
+          height="30%"
+          image={productInfo[productId].productPicture}
           alt="produxts"
         />
           <Typography gutterBottom variant="h5" component="div">
-            price
+          {productInfo[productId].productPrice}円
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
-            delivery price
+          {productInfo[productId].productTitle}
           </Typography>
           <Typography gutterBottom variant="h5" component="div">
-            name
-          </Typography>
-          <Typography gutterBottom variant="h5" component="div">
-            place
+          {productInfo[productId].productPlace}
           </Typography>
           <CardActions>
             <Button >Order</Button>

@@ -15,9 +15,7 @@ import { CardActionArea } from '@mui/material';
 
 export const AdsCards = () =>  {
   let {productInfo} = useContext(ProductInformations)
-  console.log(productInfo[0].productPicture)
   return (
-
     <Card sx={{ maxWidth: 250, boxShadow: 3}}>
       <CardActionArea>
         <CardMedia

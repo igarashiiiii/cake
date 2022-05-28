@@ -12,6 +12,7 @@ let database:any = [
     productStatus:'order',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle No.0',
+    productPlace:'Dakar',
     productQuantity:'0'
   },
   {productId : 1,
@@ -23,6 +24,7 @@ let database:any = [
     productStatus:'order',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle No.1',
+    productPlace:'Dakar',
     productQuantity:'1'
   },
   {productId : 2,
@@ -34,6 +36,7 @@ let database:any = [
     productStatus:'order',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle No.2',
+    productPlace:'Dakar',
     productQuantity:'2'
   },
   {productId : 3,
@@ -45,6 +48,7 @@ let database:any = [
     productStatus:'sold',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle Sold No.3',
+    productPlace:'Dakar',
     productQuantity:'3'
   },
   {productId : 4,
@@ -56,6 +60,7 @@ let database:any = [
     productStatus:'sold',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle soldNo.4',
+    productPlace:'Dakar',
     productQuantity:'4'
   },
   {productId : 5,
@@ -67,6 +72,7 @@ let database:any = [
     productStatus:'sell',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle  sellNo.5',
+    productPlace:'Dakar',
     productQuantity:'5'
   },
   {productId : 6,
@@ -78,6 +84,7 @@ let database:any = [
     productStatus:'order',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle No.6',
+    productPlace:'Dakar',
     productQuantity:'6'
   },
   {productId : 7,
@@ -89,6 +96,7 @@ let database:any = [
     productStatus:'order',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle No.7',
+    productPlace:'Dakar',
     productQuantity:'7'
   },
   {productId : 8,
@@ -100,6 +108,7 @@ let database:any = [
     productStatus:'sold',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle Sold No.8',
+    productPlace:'Dakar',
     productQuantity:'8'
   },
   {productId : 9,
@@ -111,6 +120,7 @@ let database:any = [
     productStatus:'sold',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle soldNo.9',
+    productPlace:'Dakar',
     productQuantity:'9'
   },
   {productId : 10,
@@ -122,6 +132,7 @@ let database:any = [
     productStatus:'sell',
     productTradeDate:'TradeDate',
     productTitle:'ProductTitle  sellNo.10',
+    productPlace:'Dakar',
     productQuantity:'10'
   }
 ]

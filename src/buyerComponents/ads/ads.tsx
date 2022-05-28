@@ -28,7 +28,6 @@ import { CardActionArea } from '@mui/material';
 export const Ads = ( ) => {
 	// global stateのproductInfoの情報を取得
 	let {productInfo} = useContext(ProductInformations)
-  console.log(productInfo[0].productPicture)
     return(
         <div>
             <StyledBody>
