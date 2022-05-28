@@ -7,7 +7,7 @@ import { Button, CardActions } from '@mui/material';
 
 //import productInformation from global state from here
 import { useContext } from 'react'
-import { ProductInformations } from '../../globalState/productInfo'
+import { ProductInformations } from '../../globalState/globalProductInfo'
 //import productInformation from global state to here
 
 
@@ -16,13 +16,14 @@ let cardStyle = {
 }
 
 export const AdDetailsCards = () =>  {
-  const productInfo = useContext(ProductInformations)
+  let {productInfo,setProductInfo} = useContext(ProductInformations)
+  console.log(productInfo[0])
+  console.log(setProductInfo)
   return (
     <Card sx={{ maxWidth: '100%'}} style={cardStyle}>
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            Title
-            {productInfo}
+            Title <br />
           </Typography>
           <CardMedia
           component="img"

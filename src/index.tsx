@@ -6,7 +6,7 @@ import { BrowserRouter } from "react-router-dom"
 import { Routing } from './route/routing'
 
 // import from global state
-import { ProductInfo } from './globalState/productInfo';
+import { GlobalProductInfo } from './globalState/globalProductInfo';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -14,9 +14,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter> 
-     <ProductInfo> 
+     <GlobalProductInfo> 
       <Routing/>
-     </ProductInfo>
+     </GlobalProductInfo>
       {/* <App key="1"/> */}
     </BrowserRouter>
   </React.StrictMode>
