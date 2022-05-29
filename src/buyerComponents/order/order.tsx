@@ -26,6 +26,18 @@ import { ProductInformations } from '../../globalState/globalProductInfo';
 export const Order = ( ) => {
 	let {productInfo} = useContext(ProductInformations)
 	let userId:number = 7
+	let resItemOrderFilter:any = []
+
+	const makeArry = (eachItemOrderFilter: any) => {
+		count += 1
+		resItemOrderFilter.add(eachItemOrderFilter);
+		console.log(`resItemOrderFilterの中身：${count}${resItemOrderFilter}`)
+		console.log(`eachItemOrderFilterの中身：${eachItemOrderFilter}`)
+		return (
+			resItemOrderFilter
+		)
+	}
+	let count:number = 0
 	return(
 		<div>
 			<StyledBody>
@@ -37,40 +49,56 @@ export const Order = ( ) => {
 						本来であればBuyerIdがuserIdのもののみ表示するが、まだ反映していない<br />
 						userIdを静的に固定:{userId}
 
-						{productInfo.map((item:any) => {
+{/* 
+userIdとproductStatusで表示する広告にフィルターをかける
+1:productStatusがorder、2:buerIdがuserIdのもの
+mapを2重でかける 
+*/}
+						{productInfo.map((itemOrderFilter:any) => {
 							return(
-								//userIdとproductStatusで表示する広告にフィルターをかける
-								//buerIdがuserIdのもの、productStatusがorderのみ表示
-								item.productStatus === 'order' && item.BuyerId === {userId} &&
-								<Card sx={{display: 'flex', boxShadow: 3, borderRadius: 2, m:1, height: '20vh'}}>
-									<CardMedia 
-											sx={{ width: "30%" }}
-											component="img"
-											image={productInfo[userId].productPicture}
-											alt="produxts"
-											/>
-									<Box sx={{ display: 'flex', flexDirection: 'column' }}>
-										<Typography gutterBottom variant="h5" component="div">
-												Title
-										</Typography>
-										<Typography gutterBottom variant="h5" component="div">
-												date
-										</Typography>
-										<Typography gutterBottom variant="h5" component="div">
-												price
-										</Typography>
-										<Typography gutterBottom variant="h5" component="div">
-												delivery price
-										</Typography>
-										<Typography gutterBottom variant="h5" component="div">
-												name
-										</Typography>
-										<Typography gutterBottom variant="h5" component="div">
-												place
-										</Typography>
-									</Box>
-								</Card>
-							)})}
+								itemOrderFilter.productStatus === 'order' && 
+
+								console.log(itemOrderFilter)
+								)
+							})
+						}
+						{resItemOrderFilter.map((BuyerOrderFilter:any) => {
+							return(
+								BuyerOrderFilter.BuyerId === {userId} && 
+
+								<p>{BuyerOrderFilter.productTitle}</p>
+								)
+							})}
+	
+
+								 {/*
+								// 	<Card sx={{display: 'flex', boxShadow: 3, borderRadius: 2, m:1, height: '20vh'}} key={itemBuyerFilter.productId}>
+								// 			<CardMedia 
+								// 					sx={{ width: "30%" }}
+								// 					component="img"
+								// 					image={itemOrderFilter.productPicture}
+								// 					alt="produxts"
+								// 					/>
+								// 			<Box sx={{ display: 'flex', flexDirection: 'column' }}>
+								// 				<Typography gutterBottom variant="h5" component="div">
+								// 				{itemOrderFilter.productTitle}
+								// 				</Typography>
+								// 				<Typography gutterBottom variant="h5" component="div">
+								// 				{itemOrderFilter.productTradeDate}
+								// 				</Typography>
+								// 				<Typography gutterBottom variant="h5" component="div">
+								// 				{itemOrderFilter.productPrice}円
+								// 				</Typography>
+								// 				<Typography gutterBottom variant="h5" component="div">
+								// 				{itemOrderFilter.productTitle}
+								// 				</Typography>
+								// 				<Typography gutterBottom variant="h5" component="div">
+								// 				{itemOrderFilter.productQuantity}
+								// 				</Typography>
+								// 			</Box>
+								// 		</Card>
+								
+								*/}
 					</StyledMain>
 				<BuyFooter/>
 			</StyledBody>
