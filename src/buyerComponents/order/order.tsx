@@ -1,9 +1,6 @@
-import React from 'react';
-
 //components import from here
 import { BuyFooter } from "../buyFooter"
 import { Header } from "../../header/header"
-import { OrderCards } from "./orderCards"
 //components import to here
 
 //globalCss import from here
