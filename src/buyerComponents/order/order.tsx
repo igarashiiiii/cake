@@ -25,19 +25,19 @@ import { ProductInformations } from '../../globalState/globalProductInfo';
 
 export const Order = ( ) => {
 	let {productInfo} = useContext(ProductInformations)
+	//userIdを静的に固定
 	let userId:number = 7
-	let resItemOrderFilter:any = []
+	//productStatus === 'order'かつBuyerId === 7となる商品情報を入れる箱
+	let buyerItemOrderFilter:any = []
 
-	const makeArry = (eachItemOrderFilter: any) => {
-		count += 1
-		resItemOrderFilter.add(eachItemOrderFilter);
-		console.log(`resItemOrderFilterの中身：${count}${resItemOrderFilter}`)
-		console.log(`eachItemOrderFilterの中身：${eachItemOrderFilter}`)
-		return (
-			resItemOrderFilter
-		)
+	//productStatus === 'order'かつBuyerId === 7となる商品情報を入れる関数
+	const makeArry = (itemOrderFilter: any) => {
+		if(itemOrderFilter.BuyerId === 7 ){
+			buyerItemOrderFilter.push(itemOrderFilter)
+			console.log(buyerItemOrderFilter)
+		}
 	}
-	let count:number = 0
+	
 	return(
 		<div>
 			<StyledBody>
@@ -57,48 +57,42 @@ mapを2重でかける
 						{productInfo.map((itemOrderFilter:any) => {
 							return(
 								itemOrderFilter.productStatus === 'order' && 
-
-								console.log(itemOrderFilter)
+								makeArry(itemOrderFilter)
 								)
 							})
 						}
-						{resItemOrderFilter.map((BuyerOrderFilter:any) => {
+ {/* productStatus === 'order'かつBuyerId === 7となる商品情報が入った箱から 
+ 表示したい情報をmap関数で取り出す
+ */}
+						{buyerItemOrderFilter.map((buyerItem:any) => {
 							return(
-								BuyerOrderFilter.BuyerId === {userId} && 
-
-								<p>{BuyerOrderFilter.productTitle}</p>
-								)
-							})}
-	
-
-								 {/*
-								// 	<Card sx={{display: 'flex', boxShadow: 3, borderRadius: 2, m:1, height: '20vh'}} key={itemBuyerFilter.productId}>
-								// 			<CardMedia 
-								// 					sx={{ width: "30%" }}
-								// 					component="img"
-								// 					image={itemOrderFilter.productPicture}
-								// 					alt="produxts"
-								// 					/>
-								// 			<Box sx={{ display: 'flex', flexDirection: 'column' }}>
-								// 				<Typography gutterBottom variant="h5" component="div">
-								// 				{itemOrderFilter.productTitle}
-								// 				</Typography>
-								// 				<Typography gutterBottom variant="h5" component="div">
-								// 				{itemOrderFilter.productTradeDate}
-								// 				</Typography>
-								// 				<Typography gutterBottom variant="h5" component="div">
-								// 				{itemOrderFilter.productPrice}円
-								// 				</Typography>
-								// 				<Typography gutterBottom variant="h5" component="div">
-								// 				{itemOrderFilter.productTitle}
-								// 				</Typography>
-								// 				<Typography gutterBottom variant="h5" component="div">
-								// 				{itemOrderFilter.productQuantity}
-								// 				</Typography>
-								// 			</Box>
-								// 		</Card>
-								
-								*/}
+								<Card sx={{display: 'flex', boxShadow: 3, borderRadius: 2, m:1, height: '20vh'}} key={buyerItem.productId}>
+									<CardMedia 
+											sx={{ width: "30%" }}
+											component="img"
+											image={buyerItem.productPicture}
+											alt="produxts"
+											/>
+									<Box sx={{ display: 'flex', flexDirection: 'column' }}>
+										<Typography gutterBottom variant="h5" component="div">
+										{buyerItem.productTitle}
+										</Typography>
+										<Typography gutterBottom variant="h5" component="div">
+										{buyerItem.productTradeDate}
+										</Typography>
+										<Typography gutterBottom variant="h5" component="div">
+										{buyerItem.productPrice}円
+										</Typography>
+										<Typography gutterBottom variant="h5" component="div">
+										{buyerItem.productTitle}
+										</Typography>
+										<Typography gutterBottom variant="h5" component="div">
+										{buyerItem.productQuantity}
+										</Typography>
+									</Box>
+								</Card>
+							)
+						})}
 					</StyledMain>
 				<BuyFooter/>
 			</StyledBody>
