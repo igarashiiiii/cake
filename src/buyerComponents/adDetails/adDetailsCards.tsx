@@ -16,7 +16,7 @@ let cardStyle = {
 }
 
 export const AdDetailsCards = () =>  {
-  let {productInfo,setProductInfo} = useContext(ProductInformations)
+  let {productInfo} = useContext(ProductInformations)
   //Firebaseから情報をとってくるまで、表示するidを静的に示す
   let productId:string = '0'
   return (
