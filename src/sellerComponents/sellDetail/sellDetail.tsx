@@ -10,8 +10,13 @@ import { StyledMain } from "../../globalCss"
 import { StyledBody } from "../../globalCss"
 //globalCss import to here
 
+// import global state from here
 import { ProductInformations } from '../../globalState/globalProductInfo';
+// import global state to here
+
+//import MUI from here
 import { Button, Card, CardActions, CardContent, Typography } from '@mui/material';
+//import MUI to here
 
 export const SellDetail = ( ) => {
 //global Product State の情報 from here
