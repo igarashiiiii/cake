@@ -39,7 +39,7 @@ export const SellDetail = ( ) => {
 											return productInfo.SellerId === 7 && productInfo.productStatus === 'order'
 										}).map((filteredBuyerInfo:any) => {
 												return(
-													<Card sx={{display: 'flex', boxShadow: 3, borderRadius: 2, m:1, height: '15vh'}}  >
+													<Card sx={{display: 'flex', boxShadow: 3, borderRadius: 2, m:1, height: '15vh'}} key={filteredBuyerInfo.BuyerId}  >
 													<CardContent>
 														<Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
 														引き渡し時間{filteredBuyerInfo.productTradeDate}
