@@ -31,7 +31,9 @@ export const SellDetail = ( ) => {
 				<StyledMain>
 					selldetailコンポーネント<br />
 					商品ごとの販売先を表示
-{/* productStatus === 'order'かつSellerId=== 7となる商品情報を入れる関数 */}
+{/* productStatus === 'order'かつSellerId=== 7となる商品情報を入れる関数 
+mapとfilterを組み合わせてみる
+*/}
 					{productInfo.filter((productInfo:any) => {
 						return productInfo.SellerId === userId && productInfo.productStatus === 'order'
 					}).map((filteredBuyerInfo:any) => {

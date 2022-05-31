@@ -8,8 +8,8 @@ import { Button, CardActions } from '@mui/material';
 //import productInformation from global state from here
 import { useContext } from 'react'
 import { ProductInformations } from '../../globalState/globalProductInfo'
+import { ShowModal } from './modal';
 //import productInformation from global state to here
-
 
 let cardStyle = {
   display: 'block',
@@ -42,7 +42,7 @@ export const AdDetailsCards = () =>  {
           {productInfo[productId].productPlace}
           </Typography>
           <CardActions>
-            <Button >Order</Button>
+            <ShowModal/>
           </CardActions>
         </CardContent>
     </Card>
