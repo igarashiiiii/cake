@@ -12,15 +12,15 @@ import { StyledBody } from "../../globalCss"
 //globalCss import to here
 
 export const AdDetail = ( ) => {
-    return(
-        <div>
-            <StyledBody sx={{display: 'block'}}>
-                <Header/>
-                <StyledMain>
-                    <AdDetailsCards/>
-                </StyledMain>            
-                <BuyFooter/>            
-            </StyledBody>
-        </div>
-    )
+	return(
+		<div>
+			<StyledBody sx={{display: 'block'}}>
+				<Header/>
+				<StyledMain>
+						<AdDetailsCards/>
+				</StyledMain>            
+				<BuyFooter/>            
+			</StyledBody>
+		</div>
+	)
 }

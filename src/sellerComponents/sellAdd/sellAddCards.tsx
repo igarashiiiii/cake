@@ -1,5 +1,10 @@
-import { Button, Container, Paper, Stack, TextField } from "@mui/material"
-import AddPhotoAlternateOutlinedIcon from '@mui/icons-material/AddPhotoAlternateOutlined';
+import { Button, Container, Stack, TextField } from "@mui/material"
+
+// import { useContext } from "react";
+
+// import { ProductInformations } from "../../globalState/globalProductInfo";
+import { useForm, Controller} from "react-hook-form";
+import { useEffect, useRef, useState } from "react";
 
 //画像アップロードのinput要素を非表示にする
 let upload = {
@@ -7,62 +12,138 @@ let upload = {
 }
 
 export const SellAddCards = () => {
+  // global stateのproductInfoの情報を取得
+	// let {ProductInfo,setProductInfo} = useContext(ProductInformations)
+  
+  //preview picture
+  const [picture, setPicture] = useState()
+  const [preview, setPreview] = useState()
+  const {handleSubmit,control} = useForm({
+    mode:"onSubmit",
+  })
+  const fileInputRef:any = useRef()
+  useEffect(() => {
+    if(picture){
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setPreview(reader.result as any);
+    };
+    reader.readAsDataURL(picture)
+  }
+  },[picture])
+
+  //onSubmitを押したときの処理
+  const onSubmit = (newData:any) => {
+    console.log(newData)
+    console.log(preview)
+  }
+  // globalStateを更新する
+
   return(
-    <div>
-      <Container maxWidth="sm" sx= {{pt: 5 }}>
-        <Stack spacing={1}>
-          <label htmlFor="image" >
-            <Paper elevation={3}
-              sx={{
-                height:'30vh',
-              }}
-            >
-              <AddPhotoAlternateOutlinedIcon fontSize="large"/>
-            </Paper>
-          </label>
+    <div >
+      <div style={{margin:"auto"}}>
+        <img alt="" src={preview}
+        width="80%" height="250px"
+        />
+      </div>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <Stack spacing={2}>
+          {/* 写真uploadボタン */}
+          <button onClick={(event) => {
+            event.preventDefault();
+            fileInputRef.current.click()
+          }}>
+            Add Image
+          </button>
           <input
-              style={upload}
-              accept="image/*"
-              type="file"
-              id='image'
+            type="file"
+            name="picture"
+            ref={fileInputRef}
+            style={{display:"none"}}
+            accept="image/*"
+            onChange={(event:any) => {
+              const file:any = event.target.files[0]
+              if(file && file.type.substr(0,5) === "image"){
+                setPicture(file)
+              }
+            }}
           />
-          <TextField
-            id="outlined-password-input"
-            label="Title"
-            autoComplete="current-password"
-            fullWidth
+
+          {/* タイトル記入 */}
+          <Controller
+            render={
+              ({ field }) => <TextField {...field}
+              id="outlined-password-input"
+              label="Title"
+              required
+          />}
+            rules={{ required: true }}
+            name="productTitle"
+            control={control}
+            defaultValue=""       
           />
-          <TextField
-            id="outlined-password-input"
-            label="Price"
-            autoComplete="current-password"
-            fullWidth
+          {/* 金額記入 */}
+          <Controller
+            render={
+              ({ field }) => <TextField {...field}
+              id="outlined-password-input"
+              label="Price"
+              fullWidth
+              required
+          />}
+            rules={{ required: true }}
+            name="productPrice"
+            control={control}
+            defaultValue=""       
           />
-          <TextField
-            id="outlined-password-input"
-            label="Place"
-            autoComplete="current-password"
-            fullWidth
+          {/* 場所記入 */}
+          <Controller
+            render={
+              ({ field }) => <TextField {...field}
+              id="outlined-password-input"
+              label="Place"
+              fullWidth
+              required
+          />}
+            rules={{ required: true }}
+            name="productPlace"
+            control={control}
+            defaultValue=""       
           />
-          <TextField
-            id="outlined-password-input"
-            label="date"
-            autoComplete="current-password"
-            fullWidth
+          {/* 日時記入 */}
+          <Controller
+            render={
+              ({ field }) => <TextField {...field}
+              id="outlined-password-input"
+              label="Date"
+              fullWidth
+              required
+          />}
+            rules={{ required: true }}
+            name="productTradeDate"
+            control={control}
+            defaultValue=""       
           />
-          <TextField
-            id="outlined-password-input"
-            label="description"
-            autoComplete="current-password"
-            maxRows={8}
-            fullWidth
-            multiline
+          {/* 商品説明記入 */}
+          <Controller
+            render={
+              ({ field }) => <TextField {...field}
+              id="outlined-password-input"
+              label="Description"
+              fullWidth
+              required
+              maxRows={8}
+          />}
+            rules={{ required: true }}
+            name="productDescription"
+            control={control}
+            defaultValue=""       
           />
-          <Button variant="outlined">
-            出品
-          </Button>
+
+          {/* 送信ボタン       */}
+          <input type="submit"/>
         </Stack>
-      </Container>
+      </form>
     </div>
   )
 }
