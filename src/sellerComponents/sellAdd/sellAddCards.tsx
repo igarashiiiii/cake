@@ -1,4 +1,4 @@
-import { Button, Container, Stack, TextField } from "@mui/material"
+import {  Stack, TextField } from "@mui/material"
 
 // import { useContext } from "react";
 
@@ -6,10 +6,6 @@ import { Button, Container, Stack, TextField } from "@mui/material"
 import { useForm, Controller} from "react-hook-form";
 import { useEffect, useRef, useState } from "react";
 
-//画像アップロードのinput要素を非表示にする
-let upload = {
-  display: 'none',
-}
 
 export const SellAddCards = () => {
   // global stateのproductInfoの情報を取得
@@ -33,17 +29,18 @@ export const SellAddCards = () => {
   },[picture])
 
   //onSubmitを押したときの処理
+  // globalStateを更新する
   const onSubmit = (newData:any) => {
     console.log(newData)
     console.log(preview)
   }
-  // globalStateを更新する
+  
 
   return(
     <div >
       <div style={{margin:"auto"}}>
         <img alt="" src={preview}
-        width="80%" height="250px"
+        width="100%" height="250px"
         />
       </div>
       <form onSubmit={handleSubmit(onSubmit)}>
