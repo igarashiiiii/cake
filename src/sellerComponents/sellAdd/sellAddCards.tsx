@@ -1,16 +1,14 @@
 import {  Stack, TextField } from "@mui/material"
 
 // import { useContext } from "react";
-
-// import { ProductInformations } from "../../globalState/globalProductInfo";
+import { ProductInformations } from "../../globalState/globalProductInfo";
 import { useForm, Controller} from "react-hook-form";
-import { useEffect, useRef, useState } from "react";
-
+import { useContext, useEffect, useRef, useState } from "react";
 
 export const SellAddCards = () => {
   // global stateのproductInfoの情報を取得
-	// let {ProductInfo,setProductInfo} = useContext(ProductInformations)
-  
+  let { productInfo, setProductInfo } = useContext(ProductInformations)
+
   //preview picture
   const [picture, setPicture] = useState()
   const [preview, setPreview] = useState()
@@ -30,10 +28,26 @@ export const SellAddCards = () => {
 
   //onSubmitを押したときの処理
   // globalStateを更新する
+  let addObject = {}
   const onSubmit = (newData:any) => {
-    console.log(newData)
-    console.log(preview)
+    console.log(newData.productTitle)
+    addObject = {
+      productId : 11,
+      BuyerId:"",
+      SellerId:0,
+      productDescription:newData.productDescription,
+      productPicture:{preview},
+      productPrice:newData.productPrice,
+      productStatus:'sell',
+      productTradeDate:newData.productTradeDate,
+      productTitle:newData.productTitle,
+      productPlace:newData.productPlace,
+      productQuantity:newData.productQuantity
+     }
+     const newProductInfo:any[] = [...productInfo, addObject]
+    setProductInfo(newProductInfo)
   }
+
   
 
   return(
