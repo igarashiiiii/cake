@@ -7,6 +7,8 @@ import { Routing } from './route/routing'
 
 // import from global state
 import { GlobalProductInfo } from './globalState/globalProductInfo';
+import { GlobalBuyerInfo } from './globalState/globalBuyerInfo';
+import { GlobalSellerInfo } from './globalState/globalSellerInfo';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -15,9 +17,12 @@ root.render(
   <React.StrictMode>
     <BrowserRouter> 
      <GlobalProductInfo> 
-      <Routing/>
+      <GlobalSellerInfo>
+        <GlobalBuyerInfo>
+          <Routing/>
+        </GlobalBuyerInfo>
+      </GlobalSellerInfo>
      </GlobalProductInfo>
-      {/* <App key="1"/> */}
     </BrowserRouter>
   </React.StrictMode>
 );

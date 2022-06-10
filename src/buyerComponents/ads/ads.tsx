@@ -62,7 +62,7 @@ export const Ads = ( ) => {
 											</Grid>
 										)
 									})}
-									</Grid>	
+									</Grid>
                 </StyledMain>            
                 <BuyFooter/>            
             </StyledBody>

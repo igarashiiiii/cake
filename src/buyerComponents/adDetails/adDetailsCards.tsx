@@ -3,20 +3,20 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { Button, CardActions } from '@mui/material';
+import { CardActions } from '@mui/material';
 
 //import productInformation from global state from here
 import { useContext } from 'react'
 import { ProductInformations } from '../../globalState/globalProductInfo'
+import { ShowModal } from './modal';
 //import productInformation from global state to here
-
 
 let cardStyle = {
   display: 'block',
 }
 
 export const AdDetailsCards = () =>  {
-  let {productInfo,setProductInfo} = useContext(ProductInformations)
+  let {productInfo} = useContext(ProductInformations)
   //Firebaseから情報をとってくるまで、表示するidを静的に示す
   let productId:string = '0'
   return (
@@ -42,7 +42,7 @@ export const AdDetailsCards = () =>  {
           {productInfo[productId].productPlace}
           </Typography>
           <CardActions>
-            <Button >Order</Button>
+            <ShowModal/>
           </CardActions>
         </CardContent>
     </Card>

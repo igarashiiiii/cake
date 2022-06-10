@@ -1,28 +1,22 @@
 import React from 'react';
 
 //import MUI icon from here
-import InputUnstyled from '@mui/base/InputUnstyled';
-import ButtonUnstyled from '@mui/base/ButtonUnstyled';
-import Box from '@mui/material/Box/Box';
+import { Button, Container,Stack, TextField } from '@mui/material';
 //import MUI icon to here
 
 
 export const Login = ( ) => {
     return(
-        <div>
-            <Box
-                sx={{
-                    display:'flex',
-                    flexDirection:'column',
-                    alignItmes:'center'
-                }}
-            >
-                <p>SMSを受信できる</p>
-                <p>電話番号を入力してください</p>
-                <InputUnstyled
-                ></InputUnstyled>
-                <ButtonUnstyled>確認コードを送信</ButtonUnstyled>
-            </Box>
+        <div
+				>
+					<Container maxWidth="sm" sx= {{pt: 5 }}>
+							<Stack spacing={3}>
+								<div>ログインパスワードをSMSで送ります<br />
+								電話番号を入力してください</div>
+								<TextField required label="電話番号" />
+								<Button variant="outlined">確認コードを送信</Button>
+							</Stack>
+						</Container>
         </div>
     )
 }
