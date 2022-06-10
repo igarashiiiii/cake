@@ -9,7 +9,7 @@ export const SellAddCards = () => {
   // global stateのproductInfoの情報を取得
   let { productInfo, setProductInfo } = useContext(ProductInformations)
 
-  //preview picture
+  //preview表示
   const [picture, setPicture] = useState()
   const [preview, setPreview] = useState()
   const {handleSubmit,control} = useForm({
@@ -30,7 +30,7 @@ export const SellAddCards = () => {
   // globalStateを更新する
   let addObject = {}
   const onSubmit = (newData:any) => {
-    console.log(newData.productTitle)
+    console.log(preview)
     addObject = {
       productId : 11,
       BuyerId:"",
